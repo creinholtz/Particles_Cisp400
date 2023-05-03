@@ -1,3 +1,10 @@
+# 400 stuff
+.vs*
+*.vcx*
+*.sin
+x64
+x86
+
 # Prerequisites
 *.d
 
