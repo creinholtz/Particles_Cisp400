@@ -1,5 +1,5 @@
 #include "Matrices.hpp"
-
+#include <assert.h>
 using namespace std;
 
 namespace Matrices
@@ -76,6 +76,7 @@ namespace Matrices
   
   RotationMatrix::RotationMatrix(double theta) : Matrix(2, 2)
   {
+    //assert(a.at(1).size() > 1);
     a.at(0).at(0) = cos(theta);
     a.at(0).at(1) = -sin(theta);
     a.at(1).at(0) = sin(theta);
@@ -92,10 +93,11 @@ namespace Matrices
 
   TranslationMatrix::TranslationMatrix(double xShift, double yShift, int nCols) : Matrix(2, nCols)
   {
+    //assert(a.size() >= nCols);
     for(int i = 0; i < nCols; i++)
     {
-      a.at(i).at(0) = xShift;
-      a.at(i).at(1) = yShift;
+      a.at(0).at(i) = xShift;
+      a.at(1).at(i) = yShift;
     }
   }
 }

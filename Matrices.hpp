@@ -28,7 +28,7 @@ namespace Matrices
   Matrix operator*(const Matrix& a, const Matrix& b);
   bool operator==(const Matrix& a, const Matrix& b);
   bool operator!=(const Matrix& a, const Matrix& b);
-  ostream& operator<<(ostream& os, const Matrix& a);
+  std::ostream& operator<<(std::ostream& os, const Matrix& a);
 
   ///2D rotation matrix
   ///usage: A = R * A rotates A theta radians counter-clockwise
